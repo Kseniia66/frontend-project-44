@@ -3,3 +3,5 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/f9c75943ac844d080692/maintainability)](https://codeclimate.com/github/Kseniia66/frontend-project-44/maintainability)
 
 [![asciicast](https://asciinema.org/a/68HHmDp4UtJNB3dI8wdIEaZKK.svg)](https://asciinema.org/a/68HHmDp4UtJNB3dI8wdIEaZKK)
+
+[![asciicast](https://asciinema.org/a/Eoy2iKtwiVIr9qKj8qwCVHpuZ.svg)](https://asciinema.org/a/Eoy2iKtwiVIr9qKj8qwCVHpuZ)
