@@ -22,8 +22,6 @@ const questionAndAnswer = () => {
         case '*':
             answer = num * num1;
             break;
-        default:
-              result = null;
     }
     return [question, answer];
 };
