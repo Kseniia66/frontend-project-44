@@ -6,25 +6,27 @@ const randomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) +
 
 const rule = 'What number is missing in the progression?';
 const questionAndAnswer = () => {
-    const num = randomNumber(1, 50);
-    const stepProgression = randomNumber(2, 10);
+    const progressionLength = 10;
     
-    
-    const progression = () => {
-        const arr = [num];
-        for(let i = 0; arr.length < 10; i += 1) {
-            arr.push(arr[i] + stepProgression);
+    const progression = (start, step) => {
+        const arr = [];
+        for(let i = 0; i < progressionLength; i += 1) {
+            const value = start + step * i;
+            arr.push(value);
         }
         return arr;
     };
-    const progressArr = progression();
-
-    const hiddenPosition = randomNumber(1, progressArr.length);
-    const element = progressArr[hiddenPosition];
-    progressArr[hiddenPosition] = '..';
-    const question = progressArr.join(' ');
-
-    const answer = String(element);
+    const start = randomNumber(1, 100);
+    const step = randomNumber(2, 10);
+    const getProgression = progression(start, step);
+    const minIndexOfHiddenNumber = 0;
+    const maxIndexOfHiddenNumber = progressionLength - 1;
+    const indexOfHiddenNumber = randomNumber(minIndexOfHiddenNumber, maxIndexOfHiddenNumber);
+    
+    const answer = String(getProgression[indexOfHiddenNumber]);
+    getProgression[indexOfHiddenNumber] = '..';
+    const question = getProgression.join(' ');
+    
 
     return [question, answer];
 };
