@@ -21,7 +21,7 @@ const questionAndAnswer = () => {
       answer = num * num1;
       break;
     default:
-        return null;
+      return null;
   }
   return [question, answer];
 };
