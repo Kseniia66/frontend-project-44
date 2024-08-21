@@ -14,8 +14,7 @@ console.log('Welcome to the Brain Games!');
     const userAnswer = readlineSync.question('Your answer: ');
     
     if (correctAnswer.toString() !== userAnswer) {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
-      console.log(`Let's try again, ${name}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}' \n Let's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
