@@ -20,7 +20,7 @@ const calc = (num, operator, num1) => {
 const questionAndAnswer = () => {
   const num = randomNumber(1, 10);
   const num1 = randomNumber(1, 10);
-  const randomIndex = operation[Math.floor(Math.random() * (operation.length - 0))];
+  const randomIndex = operation[randomNumber(0, operation.length - 1)];
   const question = `${num} ${randomIndex} ${num1}`;
   const answer = `${calc(num, randomIndex, num1)}`;
 

@@ -4,7 +4,7 @@ import randomNumber from '../randomNumber.js';
 const rule = 'What number is missing in the progression?';
 const progressionLength = 10;
 
-const progression = (start, step) => {
+const getProgression = (start, step) => {
   const arr = [];
   for (let i = 0; i < progressionLength; i += 1) {
     const value = start + step * i;
@@ -15,13 +15,13 @@ const progression = (start, step) => {
 const questionAndAnswer = () => {
   const start = randomNumber(1, 100);
   const step = randomNumber(2, 10);
-  const getProgression = progression(start, step);
+  const progression = getProgression(start, step);
   const minIndexOfHiddenNumber = 0;
   const maxIndexOfHiddenNumber = progressionLength - 1;
   const indexOfHiddenNumber = randomNumber(minIndexOfHiddenNumber, maxIndexOfHiddenNumber);
-  const answer = String(getProgression[indexOfHiddenNumber]);
-  getProgression[indexOfHiddenNumber] = '..';
-  const question = getProgression.join(' ');
+  const answer = String(progression[indexOfHiddenNumber]);
+  progression[indexOfHiddenNumber] = '..';
+  const question = progression.join(' ');
 
   return [question, answer];
 };
